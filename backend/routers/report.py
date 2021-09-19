@@ -20,9 +20,9 @@ def get_report_by_id(report_id: str):
     return report
 
 @router.put("/reports/{report_id}", response_model=schemas.report.Report)
-def resolve_report(report_id: str, resolve_report: schemas.report.ResolveReport):
-    """Resolve a report with the provided state."""
-    report = crud.report.update_report_state(report_id=report_id, state=resolve_report.ticketState)
+def update_report_state(report_id: str, updated_report_state: schemas.report.UpdatedState):
+    """Update a report state with the provided state."""
+    report = crud.report.update_report_state(report_id=report_id, state=updated_report_state.ticketState)
     if report is None:
         raise HTTPException(status_code=404, detail="Not found")
     return report
