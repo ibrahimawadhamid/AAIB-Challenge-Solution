@@ -19,7 +19,7 @@ with open(os.path.join("backend", "data.json")) as f:
 
 def get_reports() -> List[ReportSchema]:
     """Get all reports from the simulated database."""
-    return reports
+    return [report for report in reports if report.state != "BLOCKED"]
 
 
 def get_report_by_id(report_id: str) -> ReportSchema:
