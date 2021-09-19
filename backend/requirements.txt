@@ -1,0 +1,7 @@
+# core dependencies
+fastapi==0.68.1
+uvicorn==0.15.0
+# lint
+flake8==3.9.2
+# format
+autopep8==1.5.7
