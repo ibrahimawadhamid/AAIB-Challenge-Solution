@@ -11,6 +11,7 @@ def reports():
     reports = crud.report.get_reports()
     return reports
 
+
 @router.get("/reports/{report_id}", response_model=schemas.report.Report)
 def get_report_by_id(report_id: str):
     """Returns a single report filtered by id."""
@@ -18,6 +19,7 @@ def get_report_by_id(report_id: str):
     if report is None:
         raise HTTPException(status_code=404, detail="Not found")
     return report
+
 
 @router.put("/reports/{report_id}", response_model=schemas.report.Report)
 def update_report_state(report_id: str, updated_report_state: schemas.report.UpdatedState):
