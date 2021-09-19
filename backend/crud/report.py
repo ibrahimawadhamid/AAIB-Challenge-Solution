@@ -28,3 +28,12 @@ def get_report_by_id(report_id: str) -> ReportSchema:
         return reports_result[0]
     else:
         return None
+
+
+def update_report_state(report_id: str, state: str) -> ReportSchema:
+    """Update a report state then return it."""
+    report = get_report_by_id(report_id)
+    if report is None:
+        return None
+    report.state = state
+    return report

@@ -9,3 +9,8 @@ class Report(BaseModel):
     state: str
     message: str
     created: datetime.datetime
+
+
+class ResolveReport(BaseModel):
+    """A schema for resolving a report."""
+    ticketState: str
