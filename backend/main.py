@@ -7,3 +7,4 @@ app = FastAPI(
     title=settings.title, description=settings.description, version=settings.version,
     docs_url=settings.swagger, redoc_url=settings.redoc)
 app.include_router(routers.home.router)
+app.include_router(routers.report.router)

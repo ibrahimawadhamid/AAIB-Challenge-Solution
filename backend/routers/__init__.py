@@ -1,3 +1,3 @@
-from . import home
+from . import home, report
 
-__all__ = ['home', ]
+__all__ = ['home', 'report', ]
