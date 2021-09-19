@@ -6,7 +6,6 @@ class Settings(BaseSettings):
     name: str = "spam_protection"
     title: str = "Spam Protection"
     description: str = "The backend for the Spam Protection system"
-    version: str = "0.1.0"
     swagger: str = "/docs"
     redoc: str = "/redoc"
 
