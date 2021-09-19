@@ -12,7 +12,6 @@ def home(settings: Settings = Depends(get_settings)):
         "name": settings.name,
         "title": settings.title,
         "description": settings.description,
-        "version": settings.version,
         "swagger": settings.swagger,
         "redoc": settings.redoc
     }

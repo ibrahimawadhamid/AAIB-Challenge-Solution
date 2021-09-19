@@ -5,7 +5,7 @@ from backend import config, routers
 
 settings: config.Settings = config.get_settings()
 app = FastAPI(
-    title=settings.title, description=settings.description, version=settings.version,
+    title=settings.title, description=settings.description,
     docs_url=settings.swagger, redoc_url=settings.redoc)
 app.add_middleware(
     CORSMiddleware,
