@@ -1,4 +1,5 @@
-import os, json
+import os
+import json
 from typing import List
 from ..schemas.report import Report as ReportSchema
 
@@ -10,7 +11,7 @@ with open(os.path.join("backend", "data.json")) as f:
     data = json.load(f)
     for element in data["elements"]:
         report = ReportSchema(
-            id=element["id"], type=element["payload"]["reportType"], state=element["state"], 
+            id=element["id"], type=element["payload"]["reportType"], state=element["state"],
             message=element["payload"]["reportType"], created=element["created"]
         )
         reports.append(report)

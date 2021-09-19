@@ -8,6 +8,7 @@ class TicketState(str, Enum):
     closed = 'CLOSED'
     blocked = 'BLOCKED'
 
+
 class Report(BaseModel):
     """The base schema class for a single report"""
     id: str
