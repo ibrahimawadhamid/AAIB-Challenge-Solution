@@ -19,7 +19,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # start backend service
-cd backend
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 ## Terminal 2 - setup frontend ##
@@ -31,6 +30,10 @@ cp .env.example .env
 # start frontend
 npm start
 ```
+
+- Backend at [http://localhost:8000](http://localhost:8000)
+- Backend API docs at [http://localhost:8000/docs](http://localhost:8000/docs)
+- Frontend at [http://localhost:3000](http://localhost:3000)
 
 ### Docker
 
@@ -44,4 +47,4 @@ docker-compose up -d
 
 ```
 
-Open browser at [http://localhost:3000](http://localhost:3000)
+- Open browser at [http://localhost:3000](http://localhost:3000)
