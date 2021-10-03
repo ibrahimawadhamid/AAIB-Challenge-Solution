@@ -7,7 +7,7 @@ from ..schemas.report import Report as ReportSchema
 # start loading initial data "simulate a database"
 reports = []
 
-with open(os.path.join("backend", "data.json")) as f:
+with open("data.json") as f:
     data = json.load(f)
     for element in data["elements"]:
         report = ReportSchema(

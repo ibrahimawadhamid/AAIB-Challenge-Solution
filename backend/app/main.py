@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend import config, routers
+from . import config, routers
 
 
 settings: config.Settings = config.get_settings()
